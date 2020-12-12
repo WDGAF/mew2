@@ -24,4 +24,12 @@ Botnet framework with c2 and different agents
 
 #### DONE : 
 
+### Bot Master Modules
+#### TODO : 
+ - [ ] Dashboard 
+ - [ ] C2 Deployment
+ - [ ] Push agent tasks 
+ - [ ] Reverse Shell
+
+#### DONE : 
 
