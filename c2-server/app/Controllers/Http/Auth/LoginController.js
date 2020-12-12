@@ -1,7 +1,7 @@
 'use strict'
 const User  = use('App/Models/User')
 const Hash = use('Hash')
-const helper = use('App/Controllers/Http/Helpers/Helper')
+const helper = use('App/Helpers/Helper')
 const Helper = new helper() //.sanitizer(test)
 const { validate } = use('Validator')
 const nanoid = require('nanoid/async')
@@ -15,7 +15,6 @@ class LoginController {
           } catch (error) {
             return view.render('auth.login')
         }
-
 
     }
 

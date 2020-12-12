@@ -16,7 +16,7 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+Route.on('/').render('dashboard')
 Route.get('login','Auth/LoginController.show')
 Route.post('login', 'Auth/LoginController.login')
 
@@ -25,3 +25,7 @@ Route.post('forgot', 'Auth/LoginController.forgot')
 
 Route.get('recover/:key','Auth/LoginController.recover')
 Route.post('recover/:key','Auth/LoginController.recoverLogin')
+
+
+Route.get('dashboard/','DashboardController.show')
+Route.post('dashboard/','DashboardController.recoverLogin')
