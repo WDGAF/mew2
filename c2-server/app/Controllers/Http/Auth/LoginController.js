@@ -10,7 +10,7 @@ const Mail = use('Mail')
 class LoginController {
     async show({view,auth,response}){
         try {
-            const user = await auth.getUser()
+            await auth.getUser()
             return response.route('/')
           } catch (error) {
             return view.render('auth.login')
@@ -28,7 +28,6 @@ class LoginController {
         })
 
 
-
         if(validation.fails()){
                 err = "Please enter valid email"
             return view.render('auth.login',{err:err})
@@ -36,7 +35,9 @@ class LoginController {
         
         //check user input
             let user =null
-        
+        console.log(request.input('email'))
+        console.log(request.input('password'))
+
         try {
              user = await User.findBy('email',Helper.sanitizer(request.input('email')))
         } catch (error) {

@@ -1,4 +1,5 @@
 'use strict'
+const User  = use('App/Models/User')
 
 class RegisterController {
     async register({request, session, response,view}){

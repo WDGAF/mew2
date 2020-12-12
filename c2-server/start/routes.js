@@ -20,6 +20,8 @@ Route.on('/').render('dashboard')
 Route.get('login','Auth/LoginController.show')
 Route.post('login', 'Auth/LoginController.login')
 
+Route.get('register','Auth/RegisterController.register')
+
 Route.get('forgot','Auth/LoginController.showForgot')
 Route.post('forgot', 'Auth/LoginController.forgot')
 
