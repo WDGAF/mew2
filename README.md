@@ -1,9 +1,20 @@
+
 # Basic Botnet
 
 Botnet framework with c2 and different agents 
-### Agents Functionalities
+
+### Agents Software
+#### TODO : 
+ - [ ] AV Static Analysis Evasion
+ - [ ]  AV Dynamic Analysis Evasion
+ - [ ] Persistency
+
+#### DONE : 
+
+### Agents Modules
 #### TODO : 
  - [ ] Auto Updates
+ - [ ] Data Exfiltration
  - [ ] Keylogger
  - [ ] Reverse Shell
  - [ ] Screenshot
@@ -12,3 +23,5 @@ Botnet framework with c2 and different agents
  - [ ] Worm
 
 #### DONE : 
+
+
