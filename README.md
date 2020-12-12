@@ -9,6 +9,6 @@ Botnet framework with c2 and different agents
  - [ ] Screenshot
  - [ ] WebCam screenshot
  - [ ] Network Scan
- - [ ] Recruitment
+ - [ ] Worm
 
 #### DONE : 
