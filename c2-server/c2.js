@@ -1,11 +1,21 @@
 const express = require('express')
 const axios = require('axios');
 const app = express()
+const os = require('os');
 const port = 39943
-var os = require('os');
+const master = "http://127.0.0.1:3333" 
+
+function IsJsonString(str) {
+  try {
+      JSON.parse(str);
+  } catch (e) {
+      return false;
+  }
+  return true;
+}
+app.use(express.json());
 
 app.post('/', (req, res) => {
-  res.send('Hello World!')
 
   axios.post('/user', {
     os: 'sss',
@@ -20,15 +30,33 @@ app.post('/', (req, res) => {
 
 })
 
+app.post('/register-bot', (req, res) => {
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
+  console.log(typeof(req.body))
+  if(typeof(req.body)=="object"){
+
+    // send data to master
+    axios.put(master+'/register-bot', req.body)
+    .then(function (response) {
+      console.log(response);
+
+      res.status(200);
+    })
+    .catch(function (error) {
+      console.log(error)
+
+    });
     
+    res.status(200);
+
+  }
+  res.status(400);
+  
 })
 
 
 app.post('/test', (req, res) => {
-    res.send('Hello World!')    
+    res.send('Hello World!')
 })
   
 // server status infos

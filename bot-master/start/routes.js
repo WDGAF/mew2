@@ -5,7 +5,7 @@
 
 const Route = use('Route')
 
-Route.on('/').render('dashboard')
+// Route.on('/').render('dashboard')
 
 /* Auth Routes */
 Route.get('login','Auth/LoginController.show')
@@ -30,16 +30,16 @@ Route.post('dashboard/','DashboardController.recoverLogin')
 
 /* Agents Routes aka cnc */ 
 
-Route.get('bot-register/','DashboardController.show')
-Route.post('bot-register/','DashboardController.recoverLogin')
+Route.get('register-bot/','DashboardController.show')
+Route.put('register-bot/','c2/RegisterController.registerBot')
 
 /* 
 TODO 
 ============
 bot-register 
 
-uid 
-os 
+uid
+os
 user
 group
 
